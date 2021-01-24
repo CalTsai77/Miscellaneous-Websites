@@ -1,0 +1,315 @@
+    body {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1.4rem;
+        background: repeating-linear-gradient(90deg, rgba(19, 168, 255, 0.8) 0px, rgb(70, 88, 185, 0.8) 100px, rgb(70, 88, 185, 0.8) 100px, rgb(158, 20, 124, 0.8) 200px, rgba(19, 168, 255, 0.8) 300px);
+        text-align: center;
+    }
+    
+    p:focus {
+        background-color: red;
+    }
+    
+    h1:focus {
+        color: rgb(184, 5, 5);
+    }
+    
+    div {
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.19), 0 10px 10px rgba(0, 0, 0, 0.23);
+    }
+    
+    div:hover {
+        animation-name: pop;
+        animation-duration: 500ms;
+        animation-fill-mode: forwards;
+    }
+    
+    h1 {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 1.7rem;
+        text-align: center;
+        background-color: rgba(13, 218, 156);
+        padding: 2vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 12vh;
+        width: 46vw;
+        border-radius: 25vw;
+        font-weight: 700;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.19), 0 10px 10px rgba(0, 0, 0, 0.23);
+    }
+    
+    h2 {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: 700;
+        font-size: 1.5rem;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0.5vw;
+    }
+    
+    a:link {
+        color: blue;
+    }
+    
+    a:visited {
+        color: purple;
+    }
+    
+    a:hover {
+        animation-name: highlights;
+        animation-duration: 500ms;
+        animation-fill-mode: forwards;
+    }
+    
+    a:active {
+        color: red;
+    }
+    
+    img:hover {
+        animation-name: pop;
+        animation-duration: 500ms;
+        animation-fill-mode: forwards;
+    }
+    
+    @keyframes pop {
+        100% {
+            transform: scale(1.0);
+        }
+    }
+    
+    @keyframes highlights {
+        100% {
+            color: rgba(13, 218, 156);
+            font-size: 1.05rem;
+        }
+    }
+    
+    hr {
+        border: none;
+        height: 3px;
+        background-color: black;
+    }
+    
+    .balls {
+        border-radius: 50vw;
+        background: linear-gradient(90deg, rgb(19, 168, 255, 0.8), rgb(70, 88, 185, 0.8));
+        position: fixed;
+        width: 2.5vw;
+        height: 2.5vw;
+        margin-top: 3vw;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+    }
+    
+    #left-ball-top {
+        left: 10vw;
+        animation-name: bouncy-down;
+        animation-timing-function: ease-in-out;
+    }
+    
+    #right-ball-bottom {
+        right: 22vw;
+        animation-name: bouncy-up;
+        animation-timing-function: ease-in-out;
+    }
+    
+    #left-ball-bottom {
+        left: 22vw;
+        animation-name: bouncy-up;
+        animation-timing-function: ease-in-out;
+    }
+    
+    #right-ball-top {
+        right: 22vw;
+        animation-name: bouncy-down;
+        animation-timing-function: ease-in-out;
+    }
+    
+    #left-left-ball-top {
+        left: 1vw;
+        animation-name: bouncy-down;
+        animation-timing-function: ease-in-out;
+    }
+    
+    #right-right-ball-bottom {
+        right: 1vw;
+        animation-name: bouncy-up;
+        animation-timing-function: ease-in-out;
+    }
+    
+    #left-left-ball-bottom {
+        left: 1vw;
+        animation-name: bouncy-up;
+        animation-timing-function: ease-in-out;
+    }
+    
+    #right-right-ball-top {
+        right: 1vw;
+        animation-name: bouncy-down;
+        animation-timing-function: ease-in-out;
+    }
+    
+    @keyframes bouncy-down {
+        0% {
+            top: 0vh;
+            background: linear-gradient(90deg, rgb(158, 20, 124, 0.4), rgb(75, 24, 216, 0.4));
+        }
+        25% {
+            top: 66vh;
+            background: linear-gradient(180deg, rgb(158, 20, 124, 0.4), rgb(75, 24, 216, 0.4));
+        }
+        50% {
+            top: 30vh;
+            background: linear-gradient(90deg, rgb(158, 20, 124, 0.4), rgb(75, 24, 216, 0.4));
+        }
+        75% {
+            top: 46vh;
+            background: linear-gradient(180deg, rgb(158, 20, 124, 0.4), rgb(75, 24, 216, 0.4));
+        }
+        100% {
+            top: 0vh;
+            background: linear-gradient(270deg, rgb(158, 20, 124, 0.4), rgb(75, 24, 216, 0.4));
+        }
+    }
+    
+    @keyframes bouncy-up {
+        0% {
+            top: 84vh;
+            background: linear-gradient(270deg, rgb(19, 168, 255, 0.4), rgb(158, 20, 124, 0.4));
+        }
+        25% {
+            top: 18vh;
+            background: linear-gradient(0deg, rgb(19, 168, 255, 0.4), rgb(158, 20, 124, 0.4));
+        }
+        50% {
+            top: 54vh;
+            background: linear-gradient(0deg, rgb(19, 168, 255, 0.4), rgb(158, 20, 124, 0.4));
+        }
+        75% {
+            top: 38vh;
+            background: linear-gradient(0deg, rgb(19, 168, 255, 0.4), rgb(158, 20, 124, 0.4));
+        }
+        100% {
+            top: 84vh;
+            background: linear-gradient(90deg, rgb(19, 168, 255, 0.4), rgb(158, 20, 124, 0.4));
+        }
+    }
+    
+    .big-outline {
+        width: 46vw;
+        border: 7.0px solid rgb(0, 162, 255);
+        border-radius: 1vw;
+        padding: 10px;
+        margin: auto;
+        margin-bottom: 45%;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .small-outline {
+        width: 46vw;
+        border: 7.0px solid rgb(0, 162, 255);
+        border-radius: 1vw;
+        padding: 10px;
+        margin: auto;
+        margin-bottom: 45%;
+        border-radius: 3vw;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .standard-image {
+        width: auto;
+        max-width: 100vmin;
+        height: auto;
+        max-height: 100vmin;
+        border-radius: 50vw;
+    }
+    
+    .small-image {
+        width: auto;
+        max-width: 8vmin;
+        height: auto;
+        border-radius: 50vw;
+    }
+    
+    .black-border {
+        border: 0.5vmin solid black;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.19), 0 10px 10px rgba(0, 0, 0, 0.23);
+    }
+    
+    .no-border {
+        border: 0vmin solid black;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.19), 0 10px 10px rgba(0, 0, 0, 0.23);
+    }
+    
+    .silver-background {
+        background-color: rgb(207, 207, 207);
+        transform: scale(0.9);
+    }
+    
+    .aquamarine-background {
+        background-color: aquamarine;
+        transform: scale(0.9);
+    }
+    
+    .container {
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.19), 0 10px 10px rgba(0, 0, 0, 0.23);
+        color: rgb(0, 0, 0);
+        padding: 20px;
+        text-align: center;
+        background-color: rgb(92, 105, 101, 0.8);
+        height: 90vh;
+        position: fixed;
+        top: 1.5vw;
+        bottom: 1.5vw;
+        width: 16vw;
+        transform: scale(0.9);
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    #left {
+        float: left;
+        left: 4vw;
+    }
+    
+    #right {
+        float: right;
+        right: 4vw;
+    }
+    
+    left:hover {
+        animation-name: move;
+        animation-duration: 3.5s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+    }
+    
+    @keyframes move {
+        50% {
+            top: 100px;
+            left: 475px;
+            background-color: white;
+            opacity: 0.2;
+        }
+    }
+    
+    .reset {
+        margin: 0 auto 7.5vh auto;
+        box-shadow: none;
+    }
+    
+    #titled {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 1.5rem;
+        text-align: center;
+        background-color: rgb(255, 255, 255);
+        padding: 1.5vw;
+        margin: 0 auto 12vh auto;
+        font-weight: 700;
+        border-radius: none;
+        box-shadow: none;
+        width: 46vw;
+    }
